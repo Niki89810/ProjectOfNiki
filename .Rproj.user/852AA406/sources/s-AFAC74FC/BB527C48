@@ -12,15 +12,15 @@
     "path" : null,
     "project_path" : null,
     "properties" : {
-        "cacheKey" : "C32EE72D",
+        "cacheKey" : "BA87D513",
         "caption" : "classSurvey",
-        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=classSurvey&cache_key=C32EE72D",
-        "displayedObservations" : 58,
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=classSurvey&cache_key=BA87D513",
+        "displayedObservations" : "58",
         "environment" : "",
         "object" : "classSurvey",
-        "preview" : 0,
-        "totalObservations" : 58,
-        "variables" : 8
+        "preview" : "0",
+        "totalObservations" : "58",
+        "variables" : "8"
     },
     "relative_order" : 3,
     "source_on_save" : false,
