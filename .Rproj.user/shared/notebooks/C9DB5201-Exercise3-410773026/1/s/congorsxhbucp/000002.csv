@@ -16,6 +16,12 @@
 "1","Downloading: "
 "1","540 B"
 "1","     "
+"1","Downloading: "
+"1","540 B"
+"1","     "
+"1","Downloading: "
+"1","540 B"
+"1","     "
 "2","Parsed with column specification:
 cols(
   Timestamp = col_character(),

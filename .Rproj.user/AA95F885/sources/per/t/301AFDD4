@@ -5,17 +5,17 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "0",
+    "hash" : "2346344031",
     "id" : "301AFDD4",
-    "lastKnownWriteTime" : 1541219654,
-    "last_content_update" : 1541219654185,
+    "lastKnownWriteTime" : 1541220328,
+    "last_content_update" : 1541220328589,
     "path" : "~/GitHub/course-107-1-programming-for-data-science/Exercise3/Exercise3-410773026.Rmd",
     "project_path" : null,
     "properties" : {
-        "cursorPosition" : "90,30",
-        "scrollLine" : "80"
+        "cursorPosition" : "70,18",
+        "scrollLine" : "63"
     },
-    "relative_order" : 2,
+    "relative_order" : 3,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "r_markdown"
