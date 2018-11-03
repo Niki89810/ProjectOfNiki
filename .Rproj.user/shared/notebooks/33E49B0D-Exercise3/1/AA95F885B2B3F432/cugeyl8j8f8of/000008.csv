@@ -1,0 +1,16 @@
+"0","a<-classData$學號[classData$`公-10-06`==""有看公告""&classData$`練2018-10-17-1`==""1""]"
+"2","Warning message:
+"
+"2","In strsplit(code, ""\n"", fixed = TRUE) :"
+"2","
+ "
+"2"," input string 1 is invalid in this locale
+"
+"0","b<-classData$學號[classData$`公-10-06`==""有看公告""]"
+"0","c<-length(a)"
+"0","d<-length(b)"
+"0","c/d"
+"1","[1]"
+"1"," 0.7884615"
+"1","
+"
