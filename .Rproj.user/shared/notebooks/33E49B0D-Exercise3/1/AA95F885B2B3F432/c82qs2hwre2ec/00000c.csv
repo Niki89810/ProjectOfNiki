@@ -1,3 +1,0 @@
-"0","deadline<-as.POSIXct(deadline,tz=""Asia/Taipei"")"
-"0","hwData$Timestamp<-as.POSIXct(hwData$Timestamp,tz=""Asia/Taipei"")"
-"0","hwData$early<-difftime(deadline,hwData$Timestamp,units = ""days"")"

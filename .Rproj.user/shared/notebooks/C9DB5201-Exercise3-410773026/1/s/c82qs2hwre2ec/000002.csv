@@ -1,5 +1,0 @@
-"0","deadline<-as.POSIXct(deadline,tz=""Asia/Taipei"")"
-"0","hwData$Timestamp<-as.POSIXct(hwData$Timestamp,tz=""Asia/Taipei"")"
-"2","Error in as.POSIXlt.character(x, tz, ...) : 
-  character string is not in a standard unambiguous format
-"
