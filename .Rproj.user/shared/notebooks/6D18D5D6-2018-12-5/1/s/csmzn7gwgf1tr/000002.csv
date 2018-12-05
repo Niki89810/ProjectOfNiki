@@ -1,0 +1,3 @@
+"0","(libraryData$書籍出版日期==1199) %>% # 創造符合1199與否的logical vector"
+"0","  which(.) %>% # 轉成對應的row數字"
+"0","  libraryData[.,] # 去libraryData取出這些row"

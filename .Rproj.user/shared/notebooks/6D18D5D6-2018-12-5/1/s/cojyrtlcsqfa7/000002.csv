@@ -1,0 +1,20 @@
+"0","findMycollege<-function(x)"
+"0","  {"
+"0","  (libraryData$學院==x)->logINDEX"
+"0","  libraryData[logINDEX,]->subsample"
+"0","  return(subsample)"
+"0","}"
+"2","Warning messages:
+"
+"2","1: "
+"2","In grepl(""|||"", what, fixed = TRUE) :"
+"2","
+ "
+"2"," input string 1 is invalid in this locale
+"
+"2","2: "
+"2","In grepl(""|||"", what, fixed = TRUE) :"
+"2","
+ "
+"2"," input string 1 is invalid in this locale
+"

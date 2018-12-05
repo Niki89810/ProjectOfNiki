@@ -1,0 +1,24 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1543995175807.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3085893607",
+    "id" : "5E44A9C7",
+    "lastKnownWriteTime" : 1544001122,
+    "last_content_update" : 1544001122245,
+    "path" : "~/GitHub/ProjectOfNiki/2018-12-5.Rmd",
+    "project_path" : "2018-12-5.Rmd",
+    "properties" : {
+        "chunk_output_type" : "inline",
+        "cursorPosition" : "150,0",
+        "scrollLine" : "128",
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
