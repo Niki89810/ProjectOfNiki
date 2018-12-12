@@ -1,4 +1,0 @@
-"0","classSurvey <- read_csv(""https://raw.githubusercontent.com/tpemartin/github-data/master/classSurvey.csv"")"
-"2","Error in read_csv(""https://raw.githubusercontent.com/tpemartin/github-data/master/classSurvey.csv"") : 
-  could not find function ""read_csv""
-"

@@ -1,0 +1,27 @@
+"0","library(lubridate)"
+"2","
+Attaching package: ��lubridate��
+
+"
+"2","The following object is masked from ��package:base��:
+
+    date
+
+"
+"2","Warning message:
+"
+"2","In strsplit(code, ""\n"", fixed = TRUE) :"
+"2","
+ "
+"2"," input string 1 is invalid in this locale
+"
+"0","libraryData %>%"
+"0","  mutate("
+"0","    借閱時間=ymd_hms(借閱時間,tz=""Asia/Taipei"")"
+"0","  ) %>%"
+"0","  group_by(學號) %>%"
+"0","  summarise("
+"0","    第一次借書=min(借閱時間)"
+"0","  ) %>%"
+"0","  ungroup -> result3"
+"0","result3"

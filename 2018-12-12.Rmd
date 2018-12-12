@@ -1,0 +1,152 @@
+---
+title: "2018-12-12"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+library(readr)
+libraryData <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/library100_102.csv")
+```
+
+```{r}
+library(dplyr)
+libraryData$書籍館藏地 %>% as.factor %>% levels -> storageLocations
+storageLocations
+
+```
+
+```{r}
+i<-1
+# 1
+storageLocation_i <- storageLocations[i] 
+# 2
+numericalIndexForSubsample<-which(libraryData$書籍館藏地==storageLocation_i)
+subsample_i <- libraryData[numericalIndexForSubsample,]
+# 3
+borrowCount_i <- nrow(subsample_i)
+
+```
+
+```{r}
+allBorrowCount <- vector("numeric",18)
+```
+
+```{r}
+i<-1
+# 1
+storageLocation_i <- storageLocations[i] 
+# 2
+numericalIndexForSubsample<-which(libraryData$書籍館藏地==storageLocation_i)
+subsample_i <- libraryData[numericalIndexForSubsample,]
+# 3
+borrowCount_i <- nrow(subsample_i)
+#4
+borrowCount_i->allBorrowCount[[i]]
+allBorrowCount
+```
+
+```{r}
+# 0
+allBorrowCount <- vector("numeric",18)
+for (i in c(1:18)){
+# 1
+storageLocation_i <- storageLocations[i] 
+# 2
+numericalIndexForSubsample<-which(libraryData$書籍館藏地==storageLocation_i)
+subsample_i <- libraryData[numericalIndexForSubsample,]
+# 3
+borrowCount_i <- nrow(subsample_i)
+#4
+borrowCount_i->allBorrowCount[[i]]
+}
+allBorrowCount
+```
+###各院借書量
+```{r}
+
+# 0
+libraryData$學院%>%as.factor%>%levels->college
+collegeBorrowCount<-vector("numeric",length(college))
+for (i in c(1:length(college))){
+# 1
+college_i<-college[i]
+# 2
+numericalIndexForSubsample2<-which(libraryData$學院==college_i)
+subsample2_i<-libraryData[numericalIndexForSubsample2,]
+# 3
+borrowCount2_i<- nrow(subsample2_i)
+# 4
+borrowCount2_i->collegeBorrowCount[[i]]
+}
+collegeBorrowCount
+```
+###每位學生借書量
+```{r}
+# 0
+libraryData$學號%>%as.factor%>%levels->students
+studentsBorrowCount <-vector("numeric",length(students))
+for (i in c(1:length(students))){
+  students_i<-students[i]
+  numericalIndexForSubsample3<-which(libraryData$學號==students_i)
+  subsample3_i<-libraryData[numericalIndexForSubsample3,]
+  borrowCount3_i<-nrow(subsample3_i)
+  borrowCount3_i->studentsBorrowCount[[i]]
+}
+```
+```{r}
+libraryData %>%
+  group_by(書籍館藏地) %>%
+  summarise(
+    borrowCount=length(學號)
+  ) -> result
+result
+```
+
+```{r}
+# 0
+allBorrowCount <- vector("numeric",18)
+for(i in c(1:18)){
+  # 1
+  storageLocation_i <- storageLocations[i] 
+  # 2
+  numericalIndexForSubsample<-which(libraryData$書籍館藏地==storageLocation_i)
+  subsample_i <- libraryData[numericalIndexForSubsample,]
+  # 3
+  borrowCount_i <- length(subsample_i$學號)
+  # 4
+  allBorrowCount[[i]]<-borrowCount_i  
+}
+```
+
+```{r}
+libraryData %>%
+  group_by(學院,入學年) %>%
+  summarise(
+    borrowCount=length(學號)
+  ) -> result2
+result2
+```
+
+```{r}
+library(lubridate)
+libraryData %>%
+  mutate(
+    借閱時間=ymd_hms(借閱時間,tz="Asia/Taipei")
+  ) %>%
+  group_by(學號) %>%
+  summarise(
+    第一次借書=min(借閱時間)
+  ) %>%
+  ungroup -> result3
+result3
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
